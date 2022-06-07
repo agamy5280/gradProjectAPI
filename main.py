@@ -7,7 +7,7 @@ from sklearn.preprocessing import MinMaxScaler
 from keras.models import Sequential
 from keras.layers import LSTM
 from keras.layers import Dense
-from keras.models import load_modelweb: gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app
+from keras.models import load_model
 import tensorflow
 from pandas.tseries.offsets import DateOffset
 
