@@ -1,7 +1,6 @@
 pandas
 numpy
 tensorflow
-tensorflow-gpu
 fastapi
 sklearn
 scikit-learn
