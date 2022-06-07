@@ -8,6 +8,7 @@ from keras.models import Sequential
 from keras.layers import LSTM
 from keras.layers import Dense
 from keras.models import load_model
+from keras.callbacks import EarlyStopping
 import tensorflow
 from pandas.tseries.offsets import DateOffset
 
@@ -90,7 +91,8 @@ def index(category: str):
     model.add(Dense(1))
 
     model.compile(optimizer='adam', loss='mean_squared_error', metrics=['mse', 'mae'])
-    history = model.fit(x_train, y_train, epochs=100, batch_size=32, validation_split=validation_split_size)
+    es = EarlyStopping(monitor='val_loss', mode='min', verbose=20, patience=10)
+    history = model.fit(x_train, y_train, epochs=100, batch_size=32, validation_split=validation_split_size,callbacks=[es])
 
     if category == "automotive":
         model.save('automotive')
