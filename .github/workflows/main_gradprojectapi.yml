@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'gradProjectAPI'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_51776A744E0A4DBA9F6A500EEE8A61C1 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E084733AEF8C4A7E87CB67C7D0759CED }}
