@@ -1,1 +1,1 @@
-web: gunicorn -w 10 -k --config gunicorn.conf.py main:app
+web: gunicorn -w 10 -k uvicorn.workers.UvicornWorker main:app
