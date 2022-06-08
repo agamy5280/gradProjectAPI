@@ -1,1 +1,1 @@
-web: gunicorn --worker-tmp-dir /dev/shm --config gunicorn.conf.py main:app
+web: gunicorn --worker-tmp-dir /dev/shm --timeout 3000 --config gunicorn.conf.py main:app
