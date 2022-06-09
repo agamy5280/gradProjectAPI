@@ -92,7 +92,7 @@ def index(category: str):
 
     model.compile(optimizer='adam', loss='mean_squared_error', metrics=['mse', 'mae'])
 
-    history = model.fit(x_train, y_train, epochs=100, batch_size=32, validation_split=validation_split_size)
+    history = model.fit(x_train, y_train, epochs=40, batch_size=32, validation_split=validation_split_size)
 
     if category == "automotive":
         model.save('automotive')
