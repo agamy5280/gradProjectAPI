@@ -83,11 +83,14 @@ def index(n_days: int, category: str):
 
     pred_date_df['date'] = pred_date_df['date'].astype(str)
     pred_date_df_list = pred_date_df.values.tolist()
-    jsonStr = json.dumps(pred_date_df_list)
 
 
+    pred_date_df_list = pd.DataFrame(pred_date_df_list,columns=["date", "sales"])
 
-    return jsonStr
+    jsonStr = pred_date_df_list.to_json(orient='records')
+    parsed = json.loads(jsonStr)
+
+    return parsed
 
 
 
