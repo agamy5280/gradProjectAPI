@@ -8,6 +8,11 @@ client_header_timeout = 3000
 client_body_timeout = 3000
 fastcgi_read_timeout = 3000
 timeout = 3000
-threads = 48
+
+timeout: 3000
+client_header_timeout : 3000
+client_body_timeout : 3000
+fastcgi_read_timeout : 3000
+
 # Uvicorn's Gunicorn worker class
 worker_class = "uvicorn.workers.UvicornWorker"
